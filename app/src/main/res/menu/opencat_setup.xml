@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- action button for search -->
+
+    <item
+        android:id="@+id/Save"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Save"
+        app:showAsAction="ifRoom" />
+
+    <!-- action button for refresh -->
+
+    <!-- action button for copy -->
+</menu>

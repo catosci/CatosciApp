@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.catosci.opencat.OpenCatActivity">
+
+    <com.longdo.mjpegviewer.MjpegView
+        android:id="@+id/mjpegview_ble"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:rotation="0"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgSmartCar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow2"
+        app:layout_constraintEnd_toStartOf="@+id/TogBtnUltraNOIR"
+        app:layout_constraintStart_toEndOf="@+id/TogBtnUltra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/smartcar_catosci" />
+
+    <com.catosci.opencat.JoystickView
+        android:id="@+id/joystickMove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_Ble"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:JV_borderColor="@color/white"
+        app:JV_borderWidth="3dp"
+        app:JV_buttonColor="@color/colorPrimary"
+        app:JV_fixedCenter="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joystickMove"
+        app:layout_constraintVertical_bias="0.627"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnUltra"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="OBSTACLE AVOID"
+        android:textOn="OBSTACLE AVOID"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnFollow"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="FOLLOW"
+        android:textOn="FOLLOW"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tableRow2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TogBtnUltra" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnUltraNOIR"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="OBSTACLE AVOID 2"
+        android:textOn="OBSTACLE AVOID 2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnTrack"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="TRACKING"
+        android:textOn="TRACKING"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tableRow2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/TogBtnUltraNOIR"
+        app:layout_constraintTop_toBottomOf="@+id/TogBtnUltraNOIR" />
+
+    <TextView
+        android:id="@+id/TxtSonar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="50.00"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ImgSonar"
+        app:layout_constraintEnd_toEndOf="@+id/TogBtnUltraNOIR"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/TogBtnUltra" />
+
+    <ImageView
+        android:id="@+id/ImgSonar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgSmartCar"
+        app:layout_constraintEnd_toStartOf="@+id/ImgIRdx"
+        app:layout_constraintStart_toEndOf="@+id/ImgIRsx"
+        app:srcCompat="@drawable/wall_sonar" />
+
+    <ImageView
+        android:id="@+id/ImgIRdx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:rotation="45"
+        app:layout_constraintEnd_toStartOf="@+id/TogBtnUltraNOIR"
+        app:layout_constraintTop_toBottomOf="@id/ImgSonar"
+        app:srcCompat="@drawable/wall_ir" />
+
+    <ImageView
+        android:id="@+id/ImgIRsx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:rotation="-45"
+        app:layout_constraintStart_toEndOf="@+id/TogBtnUltra"
+        app:layout_constraintTop_toBottomOf="@id/ImgSonar"
+        app:srcCompat="@drawable/wall_ir" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <Button
+            android:id="@+id/btSlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_slow"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_normal"
+            android:textColor="@color/colorButton2" />
+
+        <Button
+            android:id="@+id/btFast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_fast"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/TxtBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0.00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/joystickMove" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnBuz"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textOff="BUZZ"
+        android:textOn="BUZZ"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joystickMove" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

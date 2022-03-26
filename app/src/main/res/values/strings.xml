@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Catosci</string>
+
+    <string name="title">Catosci</string>
+    <string name="paired_devices">Paired devices</string>
+    <string name="instructions">How to use</string>
+    <string name="posture">Posture</string>
+    <string name="behaviour">Behaviour</string>
+    <string name="movements">Movements</string>
+    <string name="madeBy">Made by @Catosci</string>
+    <string name="paired_devices_text">Select OpenCat to connect:</string>
+    <string name="connectig_bluetooth">press to connect Bluetooth Open Cat</string>
+    <string name="btn_rest">REST</string>
+    <string name="btn_GYRO">GYRO</string>
+    <string name="btn_Led">LED</string>
+    <string name="btn_shutdown">SHUTDOWN</string>
+    <string name="btn_step">STEP</string>
+    <string name="btn_crawl">CRAWL</string>
+    <string name="btn_walk">WALK</string>
+    <string name="btn_trot">TROT</string>
+    <string name="btn_run">RUN</string>
+    <string name="btn_bound">BOUND</string>
+    <string name="btn_greetings">GREET</string>
+    <string name="btn_pushup">PUSHUP</string>
+    <string name="btn_buttup">BUTTUP</string>
+    <string name="btn_pee">PEE</string>
+    <string name="btn_stretch">STRETCH</string>
+    <string name="btn_sit">SIT</string>
+    <string name="btn_zero">ZERO</string>
+    <string name="btn_stand">STAND</string>
+    <string name="btn_disconnect">DISCONNECT</string>
+    <string name="btn_connect">CONNECT</string>
+    <string name="btn_play">PLAY</string>
+    <string name="mode_simple">CHANGE VIEW</string>
+    <string name="connect_details">The Open Source robot that you can built yourself</string>
+    <string name="instructions_details">
+        <b>Pairing OpenCat to your Android device:\n</b>
+        \t\t1. Swipe down from the top of the screen.\n
+        \t\t2. Touch and hold Bluetooth icon.\n
+        \t\t3. Tap <i>Pair new device</i>.\n
+        \t\t4. Tap the name of OpenCat.\n
+        \t\t5. Use the following pin code: <i>0000</i> or <i>1234</i>.\n\n\n
+
+        <b>Connecting to OpenCat:\n</b>
+        \t\t1. In this App, tap <i>PAIRED DEVICES</i> button.\n
+        \t\t2. Select OpenCat in paired devices list.\n\n\n
+
+        <b>Controlling OpenCat:\n</b>
+        \t\t· Use the Joystick to control OpenCat\'s movement.\n
+        \t\t· Tap <i>REST</i> to turn off OpenCat\'s servos.\n
+        \t\t· Tap <i>GYRO</i> to turn on/off OpenCat\'s gyroscope.\n
+        \t\t· Tap <i>STAND</i> to put OpenCat in it\'s neutral standing posture.\n
+        \t\t· Tap <i>STEP</i> to make OpenCat step in it\'s current position.\n
+        \t\t· Tap <i>CRAWL</i> to set crawling gait.\n
+        \t\t· Tap <i>WALK</i> to set walking gait.\n
+        \t\t· Tap <i>TROT</i> to set trotting gait.\n
+        \t\t· Tap <i>DISCONNECT</i> to turn off OpenCat\'s servos and exit.
+    </string>
+
+    <string name="smartcar_btN1">BTN1</string>
+    <string name="smartcar_btN2">FWD</string>
+    <string name="smartcar_btN3">BTN3</string>
+    <string name="smartcar_btN4">LEFT</string>
+    <string name="smartcar_btN5">STOP</string>
+    <string name="smartcar_btN6">RIGHT</string>
+    <string name="smartcar_btN7">BTN7</string>
+    <string name="smartcar_btN8">BWD</string>
+    <string name="smartcar_btN9">BTN9</string>
+
+    <string name="smartcar_mode">ACTION MODE</string>
+    <string name="smartcar_move">MOVEMENTS</string>
+    <string name="smartcar_sensor">SENSOR</string>
+
+    <string name="smartcar_ultrasonic">ULTRASONIC</string>
+    <string name="smartcar_ultrasonic_noir">ULTRASONIC NOIR</string>
+    <string name="smartcar_tracking">TRACKING</string>
+    <string name="smartcar_follow">FOLLOW</string>
+
+    <string name="smartcar_btn_slow">SLOW</string>
+    <string name="smartcar_btn_normal">NORMAL</string>
+    <string name="smartcar_btn_fast">FAST</string>
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.catosci.opencat.OpenCatActivity">
+
+    <com.longdo.mjpegviewer.MjpegView
+        android:id="@+id/mjpegview_ble"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:rotation="0"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/joystickView_Ble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_Ble"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:JV_borderColor="@color/white"
+        app:JV_borderWidth="3dp"
+        app:JV_buttonColor="@color/colorPrimary"
+        app:JV_fixedCenter="false"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnUltra"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="AVOID"
+        android:textOn="AVOID"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joystickView_Ble" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnFollow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="FOLLOW"
+        android:textOn="FOLLOW"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintStart_toStartOf="@+id/TogBtnUltra"
+        app:layout_constraintTop_toBottomOf="@+id/TogBtnUltra" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnUltraNOIR"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="AVOID 2"
+        android:textOn="AVOID 2"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/joystickView_Ble" />
+
+    <ToggleButton
+        android:id="@+id/TogBtnTrack"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_toggle_bg"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="TRACK"
+        android:textOn="TRACK"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintStart_toStartOf="@+id/TogBtnUltraNOIR"
+        app:layout_constraintTop_toBottomOf="@+id/TogBtnUltraNOIR" />
+
+    <TextView
+        android:id="@+id/TxtSonar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50.00"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjpegview_ble" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btSlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_slow"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_normal"
+            android:textColor="@color/colorButton2" />
+
+        <Button
+            android:id="@+id/btFast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button2"
+            android:text="@string/smartcar_btn_fast"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/TxtBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="5.0 V"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/mjpegview_ble"
+        app:layout_constraintTop_toTopOf="@+id/mjpegview_ble" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
